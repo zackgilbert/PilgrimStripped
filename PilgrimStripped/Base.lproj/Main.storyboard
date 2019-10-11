@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PilgrimStripped" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Last Known Location: " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="200" translatesAutoresizingMaskIntoConstraints="NO" id="ph8-KJ-dPL">
+                                <rect key="frame" x="16" y="93" width="166" height="43"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" updatesFrequently="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPm-RX-jmH">
+                                <rect key="frame" x="16" y="50" width="166" height="30"/>
+                                <state key="normal" title="Trigger Foreground Visit"/>
+                                <connections>
+                                    <action selector="testVisit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tSc-84-SyL"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="lastKnownField" preservesSuperviewLayoutMargins="YES" layoutMarginsFollowReadableWidth="YES" text="Unknown" lineBreakMode="wordWrap" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGn-Ie-fta">
+                                <rect key="frame" x="16" y="144" width="345" height="405"/>
+                                <accessibility key="accessibilityConfiguration" identifier="lastKnownField">
+                                    <accessibilityTraits key="traits" notEnabled="YES" updatesFrequently="YES" adjustable="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="405" id="9kM-9U-2FZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ol-Ol-1DF">
+                                <rect key="frame" x="272" y="50" width="89" height="30"/>
+                                <state key="normal" title="Debug Mode"/>
+                                <connections>
+                                    <action selector="debugButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f8h-PC-Mbh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DGn-Ie-fta" secondAttribute="bottom" constant="118" id="6jg-0A-G1E"/>
+                            <constraint firstItem="DGn-Ie-fta" firstAttribute="top" secondItem="ph8-KJ-dPL" secondAttribute="bottom" constant="8" symbolic="YES" id="Fld-2Z-vUc"/>
+                            <constraint firstItem="9ol-Ol-1DF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="GVL-Vp-oSH"/>
+                            <constraint firstItem="DGn-Ie-fta" firstAttribute="trailing" secondItem="9ol-Ol-1DF" secondAttribute="trailing" id="Iiv-cl-gyh"/>
+                            <constraint firstItem="9ol-Ol-1DF" firstAttribute="baseline" secondItem="zPm-RX-jmH" secondAttribute="baseline" id="Zlu-TK-H0Z"/>
+                            <constraint firstItem="DGn-Ie-fta" firstAttribute="leading" secondItem="ph8-KJ-dPL" secondAttribute="leading" id="bhg-mL-g9z"/>
+                            <constraint firstItem="DGn-Ie-fta" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="kN1-zh-Ufc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DGn-Ie-fta" secondAttribute="trailing" constant="14" id="n9m-O9-5sI"/>
+                            <constraint firstItem="DGn-Ie-fta" firstAttribute="leading" secondItem="zPm-RX-jmH" secondAttribute="leading" id="qdp-Wa-Oy5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="lastKnownField" destination="DGn-Ie-fta" id="DcN-IP-5CJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="105.69715142428787"/>
+        </scene>
+    </scenes>
+</document>
